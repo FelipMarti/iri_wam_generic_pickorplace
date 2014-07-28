@@ -1,0 +1,14 @@
+<launch>
+
+  <node name="iri_wam_generic_pickorplace" pkg="iri_wam_generic_pickorplace" type="iri_wam_generic_pickorplace" output="screen" >
+  <!-- Choose EF  -->
+<!--    <remap from="/iri_wam_generic_pickorplace/get_robot_ik" to="/estirabot/estirabot_tcp_ik/get_wam_ik" />   -->
+    <remap from="/iri_wam_generic_pickorplace/get_robot_ik" to="/estirabot/estirabot_gripper_ik/get_wam_ik" />
+    <remap from="/iri_wam_generic_pickorplace/wam_joints_pose" to="/estirabot/estirabot_controller/joints_move" />
+    <remap from="/close_gripper" to="/estirabot/gripper/tool_close_action" />
+    <remap from="/open_gripper" to="/estirabot/gripper/tool_open_action" />  
+  </node>
+
+
+</launch>
+
